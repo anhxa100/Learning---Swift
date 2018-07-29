@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "name", sender: self) //name : định danh thanh điều hướng , perform: thực thi, với phương thức điều hướng "name", người gửi: chính nó
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! NameViewController   // vc: viewcontroller, cấu trúc cú pháp segue.destination as! <Class màn nhận >
+        let vc = segue.destination as! NameViewController   // vc: viewcontroller, cấu trúc cú pháp segue.destination as! <Class màn nhận >
         
         vc.finalName = self.nameText // gán giá trị của biến finalName bằng giá trị của nameText, khi đó biến finalName hứng được dữ liệu từ biến bắn sang (nameText)
         
