@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asz-mh-kpf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Trip View Controller-->
+        <scene sceneID="UJ7-LJ-uTK">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="asz-mh-kpf" customClass="AddTripViewController" customModule="ThemSuaXoaPart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T7V-yv-c5M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-g2-3Eu">
+                                <rect key="frame" x="16" y="269" width="343" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Xp-9V-oIM">
+                                        <rect key="frame" x="16" y="8" width="311" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập dữ liệu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4t-je-bQg">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMk-SR-fvn">
+                                                <rect key="frame" x="0.0" y="32" width="311" height="34.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLz-be-R6A">
+                                                <rect key="frame" x="0.0" y="74.5" width="311" height="37.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-WH-bUz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="151.5" height="37.5"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <connections>
+                                                            <action selector="cancel:" destination="asz-mh-kpf" eventType="touchUpInside" id="9ss-q6-3p2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueB-rj-Dby">
+                                                        <rect key="frame" x="159.5" y="0.0" width="151.5" height="37.5"/>
+                                                        <state key="normal" title="Save"/>
+                                                        <connections>
+                                                            <action selector="save:" destination="asz-mh-kpf" eventType="touchUpInside" id="xAm-6k-JxT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BMk-SR-fvn" secondAttribute="trailing" id="ROl-vF-EKb"/>
+                                            <constraint firstAttribute="bottom" secondItem="pLz-be-R6A" secondAttribute="bottom" id="oMz-eb-Pb8"/>
+                                            <constraint firstAttribute="trailing" secondItem="pLz-be-R6A" secondAttribute="trailing" id="oRF-2z-QAI"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9Xp-9V-oIM" firstAttribute="leading" secondItem="t6t-g2-3Eu" secondAttribute="leading" constant="16" id="2Uo-2V-RFF"/>
+                                    <constraint firstItem="9Xp-9V-oIM" firstAttribute="top" secondItem="t6t-g2-3Eu" secondAttribute="top" constant="8" id="PA6-Vz-8fD"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Xp-9V-oIM" secondAttribute="bottom" constant="8" id="yD3-0b-3ll"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Xp-9V-oIM" secondAttribute="trailing" constant="16" id="yWb-aR-ooF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.70347281678082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t6t-g2-3Eu" firstAttribute="centerY" secondItem="T7V-yv-c5M" secondAttribute="centerY" id="1kf-Cf-2EC"/>
+                            <constraint firstItem="t6t-g2-3Eu" firstAttribute="top" secondItem="JfC-7a-8eM" secondAttribute="top" constant="249" id="2rx-OZ-4Fs"/>
+                            <constraint firstItem="t6t-g2-3Eu" firstAttribute="centerX" secondItem="T7V-yv-c5M" secondAttribute="centerX" id="ICW-2i-59o"/>
+                            <constraint firstItem="t6t-g2-3Eu" firstAttribute="leading" secondItem="T7V-yv-c5M" secondAttribute="leadingMargin" id="QmD-92-dLl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JfC-7a-8eM"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="iqM-WH-bUz" id="hlY-IH-BCu"/>
+                        <outlet property="saveButton" destination="ueB-rj-Dby" id="xPP-lf-GcB"/>
+                        <outlet property="titleLabel" destination="g4t-je-bQg" id="G6r-cP-FHe"/>
+                        <outlet property="tripTextField" destination="BMk-SR-fvn" id="Fa8-Nq-xxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZf-Es-hax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.8" y="146.17691154422789"/>
+        </scene>
+    </scenes>
+</document>

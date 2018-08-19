@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PushPop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Hehe" id="BYZ-38-t0r" customClass="ViewController" customModule="PushPop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tls-T8-nkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1983.2" y="21.139430284857571"/>
+        </scene>
+        <!--Red View Controller-->
+        <scene sceneID="47b-3E-IwR">
+            <objects>
+                <viewController storyboardIdentifier="REDSCREEN" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o0m-eS-b8V" customClass="RedViewController" customModule="PushPop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VNt-XX-Lvi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="kas-eD-5HK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8IG-sI-zUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bjw-e8-aLs">

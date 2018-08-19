@@ -16,7 +16,6 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.dataSource = dataSource
-        dataSource.objects.insert(NSDate(), at: 0)
     }
 
     
