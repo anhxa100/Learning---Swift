@@ -19,7 +19,7 @@ import Foundation
 // MARK: - Singleton
 final class Singleton {
     // Không thể khởi tạo singleton
-    private init(){}
+//    private init(){}
     
     // MARK: Shared Instance
     static let shared = Singleton()

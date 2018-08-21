@@ -96,13 +96,14 @@ class MasterTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            Singleton.shared.addData = false
         Singleton.shared.index = indexPath.row
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func add(_ sender: Any) {
          Singleton.shared.addData = true
-            
+        
         tableView.tableFooterView = nil
         
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController

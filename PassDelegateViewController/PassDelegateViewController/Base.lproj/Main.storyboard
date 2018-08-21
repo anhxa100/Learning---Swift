@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihz-Kl-A0R">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home BaseVC-->
+        <scene sceneID="5jj-TS-Msl">
+            <objects>
+                <viewController id="Ihz-Kl-A0R" customClass="HomeBaseVC" customModule="PassDelegateViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Szg-oE-8T0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUA-U9-sfO">
+                                <rect key="frame" x="73" y="318.5" width="228" height="30"/>
+                                <state key="normal" title="SEND OUR SPY TO ENEMY BASE"/>
+                                <connections>
+                                    <segue destination="hkN-pO-mY8" kind="presentation" identifier="endSpySegue" id="cyG-HM-twR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IUA-U9-sfO" firstAttribute="centerY" secondItem="Szg-oE-8T0" secondAttribute="centerY" id="gOs-eS-cTe"/>
+                            <constraint firstItem="IUA-U9-sfO" firstAttribute="centerX" secondItem="Szg-oE-8T0" secondAttribute="centerX" id="lD2-9p-Nof"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3tJ-Fg-Eff"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STj-WE-ay7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="24"/>
+        </scene>
+        <!--Enemy BaseVC-->
+        <scene sceneID="mV9-ep-AHX">
+            <objects>
+                <viewController id="hkN-pO-mY8" customClass="EnemyBaseVC" customModule="PassDelegateViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHk-Mz-L49">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqv-W3-YT9">
+                                <rect key="frame" x="67" y="318.5" width="241" height="30"/>
+                                <state key="normal" title="HACK AND SEND MESSAGE HOME"/>
+                                <connections>
+                                    <action selector="sendingMessage:" destination="hkN-pO-mY8" eventType="touchUpInside" id="iWB-mN-EoY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uqv-W3-YT9" firstAttribute="centerX" secondItem="bHk-Mz-L49" secondAttribute="centerX" id="1PN-ew-lex"/>
+                            <constraint firstItem="uqv-W3-YT9" firstAttribute="centerY" secondItem="bHk-Mz-L49" secondAttribute="centerY" id="bAe-kt-T3J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Oc-gx-U9J"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YV-g9-30P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="23.838080959520241"/>
+        </scene>
+    </scenes>
+</document>

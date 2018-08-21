@@ -9,9 +9,10 @@
 import Foundation
 
 class DataService {
-    static let shared: DataService = DataService()
+    static let shared = DataService()
     
     private var _arrayNumber: [Int]?
+    
     var arrayNumber: [Int] {
         get {
             if _arrayNumber == nil {
@@ -23,10 +24,13 @@ class DataService {
             _arrayNumber = newValue
         }
     }
+    
     private func loadSample() {
         _arrayNumber = []
         _arrayNumber = [Int](10...15)
     }
+    
+    
     func removeData(at indexPath: IndexPath) {
         _arrayNumber?.remove(at: indexPath.row)
     }

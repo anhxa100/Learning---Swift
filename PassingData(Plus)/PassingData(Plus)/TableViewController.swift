@@ -123,6 +123,8 @@ class TableViewController: UITableViewController {
         else {
             data1.append((deatlViewController?.dataSend)!)
             tableView.reloadData()
+//            data1.insert((deatlViewController?.dataSend)!, at: 0) // Insert vao vi tri xac dinh (dau mang)
+            
 //            tableView.reloadRows(at: [IndexPath(row: data1.count - 1, section: 0)], with: .fade)
     }
     
