@@ -9,11 +9,19 @@
 import UIKit
 
 class DestinationVC: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        print("Remove NotificationCenter Deinit")
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,12 +30,12 @@ class DestinationVC: UIViewController {
     }
     
     @IBAction func peruButton(_ sender: Any) {
-        NotificationCenter.default.post(name: .peru, object: nil)
+        NotificationCenter.default.post(name: .peru, object: textField.text)
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func argentinaButton(_ sender: Any) {
-        NotificationCenter.default.post(name: .argentina, object: nil)
+        NotificationCenter.default.post(name: .argentina, object: textField.text)
         navigationController?.popViewController(animated: true)
     }
     

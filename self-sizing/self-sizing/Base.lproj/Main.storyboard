@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i31-iz-XGI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="C51-K6-41x">
+            <objects>
+                <tableViewController id="i31-iz-XGI" customClass="TableViewController" customModule="self_sizing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="koD-7z-PAE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="3lb-2a-ZtU" customClass="QuoteTableViewCell" customModule="self_sizing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lb-2a-ZtU" id="RqI-2S-Yxf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuoteLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUx-hZ-lVe">
+                                            <rect key="frame" x="24" y="19" width="327" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="AuthorLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="745-sI-Vwx">
+                                            <rect key="frame" x="24" y="47.5" width="327" height="48.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="745-sI-Vwx" secondAttribute="bottom" constant="8" id="8rj-Xq-Yjy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="745-sI-Vwx" secondAttribute="trailing" constant="8" id="ObT-Re-FAy"/>
+                                        <constraint firstItem="745-sI-Vwx" firstAttribute="top" secondItem="wUx-hZ-lVe" secondAttribute="bottom" constant="8" id="VKJ-1g-rEy"/>
+                                        <constraint firstItem="745-sI-Vwx" firstAttribute="leading" secondItem="RqI-2S-Yxf" secondAttribute="leadingMargin" constant="8" id="Y2d-rO-cmS" userLabel="Author Label.leading = leadingMargin + 8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wUx-hZ-lVe" secondAttribute="trailing" constant="8" id="inM-Nw-a5i"/>
+                                        <constraint firstItem="wUx-hZ-lVe" firstAttribute="leading" secondItem="RqI-2S-Yxf" secondAttribute="leadingMargin" constant="8" id="oLu-yM-CkT"/>
+                                        <constraint firstItem="wUx-hZ-lVe" firstAttribute="top" secondItem="RqI-2S-Yxf" secondAttribute="topMargin" constant="8" id="pBE-RM-7VP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="745-sI-Vwx" id="cqT-mi-W1o"/>
+                                    <outlet property="quoteLabel" destination="wUx-hZ-lVe" id="CLM-Wc-Vua"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i31-iz-XGI" id="dHf-wM-NJo"/>
+                            <outlet property="delegate" destination="i31-iz-XGI" id="TVx-kx-zCm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBs-iL-Ve4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>

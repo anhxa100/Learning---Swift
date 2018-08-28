@@ -20,16 +20,17 @@ class ChooseDestinationVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(setToArgentina(nitification:)) , name: .argentina, object: nil)
         
     }
-
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @objc func setToPeru (notification: NSNotification) {
-        cityChosenLabel.text = "Peru"
+        cityChosenLabel.text = notification.object as? String
     }
     @objc func setToArgentina (nitification: NSNotification) {
-        cityChosenLabel.text = "Argentina"
+        cityChosenLabel.text = nitification.object as? String
     }
 }
 
