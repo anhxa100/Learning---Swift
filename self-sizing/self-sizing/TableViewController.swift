@@ -11,13 +11,18 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    let dataForTableView = ["“I have not failed. I’ve just found 10,000 ways that won’t work.”,”Thomas A. Edison”), (“A man is but the product of his thoughts. What he thinks, he becomes.”,”Mahatma Gandhi”), (“Amateurs sit and wait for inspiration, the rest of us just get up and go to work.”,” Stephen King”), (“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”,”Albert Einstein”"]
+    let dataForTableView1 = ["“I have not failed. I’ve just found 10,000 ways that won’t work.”,”Thomas A. Edison”), (“A man is but the product of his thoughts. What he thinks, he becomes.”,”Mahatma Gandhi”), (“Amateurs sit and wait for inspiration, the rest of us just get up and go to work.”,” Stephen King”), (“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”,”Albert Einstein”"]
+    
+    let dataForTableView2 = ["“I have not failed. I’ve just found 10,000 ways that won’t work.”,”Thomas A. Edison”), (“A man is but the product of his thoughts. What he thinks, he becomes.”,”Mahatma Gandhi”), (“Amateurs sit and wait for inspiration, the rest of us just get up and go to work.”,” Stephen King”), (“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”,”Albert Einstein”.“I have not failed. I’ve just found 10,000 ways that won’t work.”,”Thomas A. Edison”), (“A man is but the product of his thoughts. What he thinks, he becomes.”,”Mahatma Gandhi”), (“Amateurs sit and wait for inspiration, the rest of us just get up and go to work.”,” Stephen King”), (“Wisdom is not a product of schooling but of the lifelong attempt to acquire it.”,”Albert Einstein”"]
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        //MARK 1:  Cach 1
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,14 +37,14 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
+    /// MARK: Cach 2
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -48,7 +53,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.dataForTableView.count
+        return self.dataForTableView1.count
     }
 
     
@@ -56,11 +61,11 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuoteTableViewCell
 
         // Configure the cell...
-        cell.quoteLabel.text = self.dataForTableView[indexPath.row]
+        cell.quoteLabel.text = self.dataForTableView1[indexPath.row]
         cell.quoteLabel.textColor = UIColor.red
         
         
-        cell.authorLabel.text = self.dataForTableView[indexPath.row]
+        cell.authorLabel.text = self.dataForTableView2[indexPath.row]
         cell.authorLabel.textColor = UIColor.brown
 
         return cell

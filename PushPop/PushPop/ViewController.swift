@@ -20,11 +20,11 @@ class ViewController: UIViewController {
         // Storyboard
         let sb = UIStoryboard(name: "Main", bundle: nil)
         // Creat blueScreen 2
-        let blueScreen2 = sb.instantiateViewController(withIdentifier: "BLUESCREEN")
-        let blueScreen3 = sb.instantiateViewController(withIdentifier: "REDSCREEN")
+        let blueScreen2 = sb.instantiateViewController(withIdentifier: "BLUESCREEN") 
+//        let blueScreen3 = sb.instantiateViewController(withIdentifier: "REDSCREEN")
         // Navigation Push
         self.navigationController?.pushViewController(blueScreen2, animated: true)
-        self.navigationController?.pushViewController(blueScreen3, animated: true)
+//        self.navigationController?.pushViewController(blueScreen3, animated: true)
     }
     
     
