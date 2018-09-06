@@ -65,11 +65,11 @@ class RatingControl: UIStackView {
         
         for index in 0..<starCount {
             let button = UIButton()
-            button.backgroundColor = UIColor.red
-            button.setImage(#imageLiteral(resourceName: "emptyStar"), for: .normal)
-            button.setImage(#imageLiteral(resourceName: "filledStar"), for: .selected)
-            button.setImage(#imageLiteral(resourceName: "highlightedStar"), for: .highlighted)
-            button.setImage(#imageLiteral(resourceName: "highlightedStar"), for: [.highlighted, .selected])
+//            button.backgroundColor = UIColor.red
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected)
+            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
             
             //Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
