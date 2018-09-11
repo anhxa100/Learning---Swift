@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     //MARK: func searchBar
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar (_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtered = searchText.isEmpty ? data : data.filter { item in
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }

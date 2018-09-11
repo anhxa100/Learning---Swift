@@ -39,6 +39,9 @@ class Meal: NSObject, NSCoding {
         guard (rating >= 0) && (rating <= 5) else {
             return nil
         }
+        if name.isEmpty || rating < 0 {
+            return nil
+        }
         
         // Initialize stored properties.
         self.name = name
@@ -62,7 +65,7 @@ class Meal: NSObject, NSCoding {
         }
         // Because photo is an optional property of Meal, just use conditional cast.
         let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
-        let rating = aDecoder.decodeObject(forKey: PropertyKey.rating) as! Int
+        let rating = aDecoder.decodeInteger(forKey: PropertyKey.rating)
         self.init(name: name, photo: photo, rating: rating)
         
     }
